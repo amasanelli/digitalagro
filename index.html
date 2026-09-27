@@ -125,7 +125,8 @@
       form input, form textarea { background: var(--wheat); border: 1px solid var(--sand); border-radius: 10px; color: var(--ink); font: 1rem var(--sans); padding: 12px 14px; resize: vertical; }
       form input:focus, form textarea:focus { border-color: var(--leaf); outline: 3px solid #3f7d4a33; }
       form[aria-busy="true"] { opacity: 0.5; pointer-events: none; }
-      #status { font-size: 0.95rem; font-weight: 600; min-height: 1.5em; }
+      #status { border-radius: 999px; bottom: 24px; box-shadow: 0 12px 32px -12px #1d242080; color: #fff; font-size: 0.95rem; font-weight: 600; left: 50%; max-width: calc(100% - 32px); opacity: 0; padding: 12px 22px; pointer-events: none; position: fixed; transform: translate(-50%, 16px); transition: opacity 0.3s, transform 0.3s; z-index: 100; }
+      #status.show { opacity: 1; transform: translate(-50%, 0); }
 
       footer { background: var(--green-dark); color: #ffffffb3; font-size: 0.9rem; padding: 32px 0; text-align: center; }
 
@@ -337,7 +338,6 @@
           <label>Email <input type="email" name="email" autocomplete="email" required /></label>
           <label>Mensaje <textarea name="message" rows="5" required></textarea></label>
           <button class="btn" type="submit">Enviar mensaje</button>
-          <p id="status" role="status"></p>
         </form>
       </div>
     </section>
@@ -350,6 +350,8 @@
         </p>
       </div>
     </footer>
+
+    <p id="status" role="status"></p>
 
     <script>
       document.getElementById("form").onsubmit = async function (event) {
@@ -365,13 +367,16 @@
           if (!response.ok) throw new Error();
           this.reset();
           status.textContent = "¡Mensaje enviado! Te respondo pronto.";
-          status.style.color = "var(--leaf)";
+          status.style.background = "var(--leaf)";
         } catch {
           status.textContent = "Error al enviar el mensaje. Intentá de nuevo.";
-          status.style.color = "#b3261e";
+          status.style.background = "#b3261e";
         } finally {
           button.disabled = false;
           this.ariaBusy = "false";
+          status.classList.add("show");
+          clearTimeout(status.timer);
+          status.timer = setTimeout(() => status.classList.remove("show"), 4000);
         }
       };
     </script>
