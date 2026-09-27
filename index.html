@@ -3,193 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <meta
-      name="keywords"
-      content="agricultura de precisión, software para el agro, análisis de datos agrícolas, agrónomo programador, soluciones tecnológicas para el agro"
-    />
     <meta
       name="description"
       content="Impulsá la eficiencia de tu producción agrícola con soluciones tecnológicas personalizadas. Software a medida, agricultura de precisión y análisis de datos para optimizar procesos y facilitar decisiones estratégicas. Tecnología y agronomía, integrados para maximizar la productividad de tu empresa."
     />
     <link rel="icon" href="favicon.ico" />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-DS8JYE0P7L"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS8JYE0P7L"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-DS8JYE0P7L");
     </script>
-
     <title>DigitalAgro</title>
     <style>
-      * {
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      body {
-        background-color: #f4f4f4;
-        color: #333;
-      }
-
-      header {
-        background-color: #2e7d32;
-        color: #fff;
-        padding: 15px;
-      }
-
-      h1 {
-        padding: 20px 0 40px 0;
-      }
-
-      h2 {
-        padding: 0 0 20px 0;
-      }
-
-      nav {
-        background-color: #388e3c;
-        padding: 15px;
-      }
-
-      nav a {
-        color: #fff;
-        font-weight: bold;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-
-      section {
-        padding: 20px;
-      }
-
-      h3 {
-        color: #1b5e20;
-        padding: 0 0 20px 0;
-      }
-
-      .services {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: space-evenly;
-      }
-
-      .service {
-        align-items: center;
-        background-color: #e8f5e9;
-        border-radius: 10px;
-        border: 1px solid #c8e6c9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 220px;
-        padding: 20px;
-        width: 300px;
-      }
-
-      .projects {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        justify-content: center;
-      }
-
-      .projects button {
-        background-color: #2e7d32;
-        border-radius: 50%;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        flex-shrink: 0;
-        font-size: 20px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        width: 40px;
-      }
-
-      .project-selector {
-        max-width: 700px;
-        width: 70%;
-      }
-
-      .project {
-        align-items: center;
-        background-color: #e8f5e9;
-        border-radius: 10px;
-        border: 1px solid #c8e6c9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 220px;
-        padding: 20px;
-        width: 100%;
-      }
-
-      .service-description,
-      .project-description {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: center;
-      }
-
-      form {
-        background-color: #fff;
-        border-radius: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
-        max-width: 500px;
-        padding: 30px;
-        width: 90%;
-      }
-
-      form input,
-      form textarea {
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin: 5px 0;
-        padding: 10px;
-        text-align: left;
-        width: 100%;
-      }
-
-      form button {
-        background-color: #2e7d32;
-        border-radius: 5px;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        padding: 10px;
-        width: 100%;
-      }
-
-      form button:hover {
-        background-color: #1b5e20;
-      }
-
-      footer {
-        background-color: #2e7d32;
-        bottom: 0;
-        color: #fff;
-        padding: 20px;
-        position: relative;
-        text-align: center;
-      }
+      * { box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+      body { background: #f4f4f4; color: #333; }
+      header, footer { background: #2e7d32; color: #fff; padding: 20px; }
+      h1 { padding: 20px 0 40px; }
+      h2, h3 { padding-bottom: 20px; }
+      h3 { color: #1b5e20; }
+      nav { background: #388e3c; padding: 15px; }
+      nav a { color: #fff; font-weight: bold; margin: 0 10px; text-decoration: none; }
+      section { padding: 20px; }
+      .services, .projects { display: flex; gap: 10px; justify-content: center; align-items: center; }
+      .services { flex-wrap: wrap; justify-content: space-evenly; align-items: stretch; }
+      .service, .project { background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 10px; display: flex; flex-direction: column; min-height: 220px; padding: 20px; }
+      .service { width: min(300px, 100%); }
+      .service p, .project p { margin: auto 0; }
+      .project[hidden] { display: none; }
+      #project-selector { max-width: 700px; width: 70%; }
+      button { background: #2e7d32; border: none; color: #fff; cursor: pointer; }
+      button:hover { background: #1b5e20; }
+      .projects button { border-radius: 50%; display: grid; flex-shrink: 0; height: 40px; padding: 0; place-items: center; width: 40px; }
+      .projects button svg { fill: none; height: 20px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; width: 20px; }
+      form { background: #fff; border: 1px solid #0001; border-radius: 10px; margin: 0 auto; max-width: 500px; padding: 30px; width: 90%; }
+      form input, form textarea { border: 1px solid #ccc; border-radius: 5px; margin: 5px 0; padding: 10px; text-align: left; width: 100%; }
+      form button { border-radius: 5px; padding: 10px; width: 100%; }
     </style>
   </head>
   <body>
@@ -211,20 +61,17 @@
         Soy Ingeniero Agrónomo y Analista en Sistemas y me dedico a impulsar el
         crecimiento y eficiencia del sector agrícola mediante soluciones
         tecnológicas personalizadas.
-        <br />
-        <br />
+        <br /><br />
         Con una sólida experiencia en agronomía y programación, desarrollo
         soluciones a medida que se adaptan a las necesidades específicas de
         empresas del agro. Mi objetivo es integrar tecnología y campo para
         optimizar procesos, aumentar la productividad y facilitar la toma de
         decisiones basada en datos precisos.
-        <br />
-        <br />
+        <br /><br />
         Si buscas digitalizar tus operaciones, mejorar el control de tus
         cultivos o gestionar tu producción agrícola de manera más eficiente,
         estás en el lugar correcto.
-        <br />
-        <br />
+        <br /><br />
         ¡Hagamos crecer tu negocio con la tecnología adecuada!
       </p>
     </section>
@@ -234,33 +81,21 @@
       <div class="services">
         <div class="service">
           <h3>Desarrollo de software</h3>
-          <div class="service-description">
-            <p>
-              Desarrollo a medida de aplicaciones móviles y web para optimizar
-              tus procesos agrícolas.
-            </p>
-          </div>
+          <p>Desarrollo a medida de aplicaciones móviles y web para optimizar tus procesos agrícolas.</p>
         </div>
         <div class="service">
           <h3>Agricultura de precisión</h3>
-          <div class="service-description">
-            <p>
-              Armado de ambientaciones basado en imágenes satelitales.
-              <br />
-              <br />
-              Creación de mapas de dosificación variable para sembradoras y
-              fertilizadoras.
-              <br />
-              <br />
-              Análisis de mapas de rendimiento.
-            </p>
-          </div>
+          <p>
+            Armado de ambientaciones basado en imágenes satelitales.
+            <br /><br />
+            Creación de mapas de dosificación variable para sembradoras y fertilizadoras.
+            <br /><br />
+            Análisis de mapas de rendimiento.
+          </p>
         </div>
         <div class="service">
           <h3>Análisis de datos</h3>
-          <div class="service-description">
-            <p>Creación de reportes basado en datos de distintas fuentes.</p>
-          </div>
+          <p>Creación de reportes basado en datos de distintas fuentes.</p>
         </div>
       </div>
     </section>
@@ -268,137 +103,103 @@
     <section id="proyectos">
       <h2>Proyectos destacados</h2>
       <div class="projects">
-        <button id="prev">&#10094;</button>
-        <div id="project-selector" class="project-selector">
-          <div class="project" style="display: flex">
+        <button id="prev" aria-label="Proyecto anterior"><svg viewBox="0 0 24 24"><path d="M14.5 5l-7 7 7 7"/></svg></button>
+        <div id="project-selector">
+          <div class="project">
             <h3>Agricultura de precisión</h3>
-            <div class="project-description">
-              <p>
-                Desde 2018, se han ambientado más de 100.000 hectáreas en la
-                provincia de Buenos Aires. Se utilizan imágenes satelitales de
-                Sentinel y Landsat, combinadas con mapas de rendimiento y
-                evaluaciones de riesgos como inundaciones y heladas. Se
-                desarrollan prescripciones de siembra y fertilización adaptadas
-                a equipos Agrometal, Plantium, Precision Planting, entre otros.
-              </p>
-            </div>
+            <p>
+              Desde 2018, se han ambientado más de 100.000 hectáreas en la
+              provincia de Buenos Aires. Se utilizan imágenes satelitales de
+              Sentinel y Landsat, combinadas con mapas de rendimiento y
+              evaluaciones de riesgos como inundaciones y heladas. Se
+              desarrollan prescripciones de siembra y fertilización adaptadas
+              a equipos Agrometal, Plantium, Precision Planting, entre otros.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Seguimiento de cultivos</h3>
-            <div class="project-description">
-              <p>
-                Aplicación web para monitorear índices vegetales en tiempo real
-                durante todo el ciclo de los cultivos. Ofrece análisis de
-                imágenes y envía reportes semanales por correo electrónico con
-                alertas personalizadas.
-              </p>
-            </div>
+            <p>
+              Aplicación web para monitorear índices vegetales en tiempo real
+              durante todo el ciclo de los cultivos. Ofrece análisis de
+              imágenes y envía reportes semanales por correo electrónico con
+              alertas personalizadas.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Costos de aplicación</h3>
-            <div class="project-description">
-              <p>
-                Aplicación móvil para calcular el costo de pulverizaciones.
-                Permite seleccionar insumos y dosis, e integra precios del ERP
-                Albor, facilitando la toma de decisiones económicas.
-              </p>
-            </div>
+            <p>
+              Aplicación móvil para calcular el costo de pulverizaciones.
+              Permite seleccionar insumos y dosis, e integra precios del ERP
+              Albor, facilitando la toma de decisiones económicas.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Análisis de ensayos</h3>
-            <div class="project-description">
-              <p>
-                Extensión para ArcGIS que automatiza el análisis de mapas de
-                rendimiento. Facilita el cálculo de resultados en prescripciones
-                variables mediante muestreo aleatorio y ANOVA.
-              </p>
-            </div>
+            <p>
+              Extensión para ArcGIS que automatiza el análisis de mapas de
+              rendimiento. Facilita el cálculo de resultados en prescripciones
+              variables mediante muestreo aleatorio y ANOVA.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Reportes en Power BI</h3>
-            <div class="project-description">
-              <p>
-                Desarrollo de reportes interactivos en Power BI, integrando
-                datos del ERP Albor y hojas de cálculo para monitorear siembra,
-                fertilización y cosecha en tiempo real.
-              </p>
-            </div>
+            <p>
+              Desarrollo de reportes interactivos en Power BI, integrando
+              datos del ERP Albor y hojas de cálculo para monitorear siembra,
+              fertilización y cosecha en tiempo real.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Avance de cosecha</h3>
-            <div class="project-description">
-              <p>
-                Aplicación móvil para generar cartas de porte en el campo.
-                Almacena datos para reportes de cosecha y permite registrar
-                kilos almacenados en silos o bolsas.
-              </p>
-            </div>
+            <p>
+              Aplicación móvil para generar cartas de porte en el campo.
+              Almacena datos para reportes de cosecha y permite registrar
+              kilos almacenados en silos o bolsas.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Pedido de insumos</h3>
-            <div class="project-description">
-              <p>
-                Plataforma móvil y web para gestionar pedidos de insumos. Se
-                integra con el ERP Albor para controlar stock disponible y
-                facilita la comunicación entre áreas.
-              </p>
-            </div>
+            <p>
+              Plataforma móvil y web para gestionar pedidos de insumos. Se
+              integra con el ERP Albor para controlar stock disponible y
+              facilita la comunicación entre áreas.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Pedido de camiones</h3>
-            <div class="project-description">
-              <p>
-                Aplicación para coordinar pedidos de transporte durante la
-                cosecha. Permite realizar solicitudes al área de logística y
-                recibir cupos asignados de manera eficiente.
-              </p>
-            </div>
+            <p>
+              Aplicación para coordinar pedidos de transporte durante la
+              cosecha. Permite realizar solicitudes al área de logística y
+              recibir cupos asignados de manera eficiente.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Recetas agronómicas</h3>
-            <div class="project-description">
-              <p>
-                Aplicación móvil para generar recetas agronómicas digitales en
-                el campo. Facilita la carga de datos y permite descargar y
-                compartir las recetas en formato PDF.
-              </p>
-            </div>
+            <p>
+              Aplicación móvil para generar recetas agronómicas digitales en
+              el campo. Facilita la carga de datos y permite descargar y
+              compartir las recetas en formato PDF.
+            </p>
           </div>
-
-          <div class="project" style="display: none">
+          <div class="project" hidden>
             <h3>Cuaderno virtual</h3>
-            <div class="project-description">
-              <p>
-                Aplicación móvil para registrar lluvias, recorridas y otros
-                datos de interés agronómico. Se integra con sistemas de imágenes
-                satelitales para mostrar índices vegetales actualizados.
-              </p>
-            </div>
+            <p>
+              Aplicación móvil para registrar lluvias, recorridas y otros
+              datos de interés agronómico. Se integra con sistemas de imágenes
+              satelitales para mostrar índices vegetales actualizados.
+            </p>
           </div>
         </div>
-        <button id="next">&#10095;</button>
+        <button id="next" aria-label="Proyecto siguiente"><svg viewBox="0 0 24 24"><path d="M9.5 5l7 7-7 7"/></svg></button>
       </div>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
       <form id="form">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea
-          name="message"
-          placeholder="Mensaje"
-          rows="5"
-          required
-        ></textarea>
+        <input type="text" name="name" placeholder="Nombre" aria-label="Nombre" required />
+        <input type="email" name="email" placeholder="Email" aria-label="Email" required />
+        <textarea name="message" placeholder="Mensaje" aria-label="Mensaje" rows="5" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
@@ -409,66 +210,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      const projects =
-        document.getElementById("project-selector").children.length;
+      const projects = document.querySelectorAll(".project");
+      let i = 0;
+      const show = (step) => {
+        projects[i].hidden = true;
+        i = (i + step + projects.length) % projects.length;
+        projects[i].hidden = false;
+      };
+      document.getElementById("prev").onclick = () => show(-1);
+      document.getElementById("next").onclick = () => show(1);
 
-      let projectIndex = 0;
-
-      emailjs.init({
-        publicKey: "qQ71wfgrucunEqHbz",
-      });
-
-      document
-        .getElementById("form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          emailjs
-            .sendForm("gmail", "contact", this)
-            .then(() => {
-              this.reset();
-              console.debug("Mensaje de contacto enviado!");
-            })
-            .catch((error) => {
-              console.error("Error al enviar el mensaje de contacto", error);
-            });
-        });
-
-      document
-        .getElementById("next")
-        .addEventListener("click", function (event) {
-          document.getElementById("project-selector").children[
-            projectIndex
-          ].style.display = "none";
-
-          projectIndex++;
-
-          if (projectIndex > projects - 1) {
-            projectIndex = 0;
-          }
-
-          document.getElementById("project-selector").children[
-            projectIndex
-          ].style.display = "flex";
-        });
-
-      document
-        .getElementById("prev")
-        .addEventListener("click", function (event) {
-          document.getElementById("project-selector").children[
-            projectIndex
-          ].style.display = "none";
-
-          projectIndex--;
-
-          if (projectIndex < 0) {
-            projectIndex = projects - 1;
-          }
-
-          document.getElementById("project-selector").children[
-            projectIndex
-          ].style.display = "flex";
-        });
+      document.getElementById("form").onsubmit = function (event) {
+        event.preventDefault();
+        const button = this.querySelector("button");
+        button.disabled = true;
+        emailjs
+          .sendForm("gmail", "contact", this, { publicKey: "qQ71wfgrucunEqHbz" })
+          .then(
+            () => { this.reset(); alert("¡Mensaje enviado!"); },
+            () => alert("Error al enviar el mensaje. Intentá de nuevo."),
+          )
+          .finally(() => (button.disabled = false));
+      };
     </script>
   </body>
 </html>
