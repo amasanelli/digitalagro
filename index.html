@@ -225,6 +225,8 @@
         <a href="https://www.linkedin.com/in/amasanelli" rel="me">LinkedIn</a>.
       </p>
       <form id="form">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde DigitalAgro" />
+        <input type="checkbox" name="botcheck" style="display: none" />
         <input type="text" name="name" placeholder="Nombre" aria-label="Nombre" required />
         <input type="email" name="email" placeholder="Email" aria-label="Email" required />
         <textarea name="message" placeholder="Mensaje" aria-label="Mensaje" rows="5" required></textarea>
@@ -239,19 +241,23 @@
       </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      document.getElementById("form").onsubmit = function (event) {
+      document.getElementById("form").onsubmit = async function (event) {
         event.preventDefault();
         const button = this.querySelector("button");
         button.disabled = true;
-        emailjs
-          .sendForm("gmail", "contact", this, { publicKey: "qQ71wfgrucunEqHbz" })
-          .then(
-            () => { this.reset(); alert("¡Mensaje enviado!"); },
-            () => alert("Error al enviar el mensaje. Intentá de nuevo."),
-          )
-          .finally(() => (button.disabled = false));
+        const data = new FormData(this);
+        data.append("access_key", "35d23843-89a1-460a-b130-ac288fc67f9d");
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+          if (!response.ok) throw new Error();
+          this.reset();
+          alert("¡Mensaje enviado!");
+        } catch {
+          alert("Error al enviar el mensaje. Intentá de nuevo.");
+        } finally {
+          button.disabled = false;
+        }
       };
     </script>
   </body>
