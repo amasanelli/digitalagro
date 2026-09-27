@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://digitalagro.masanellia.com.ar/sitemap.xml

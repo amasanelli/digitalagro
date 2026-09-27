@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Impulsá la eficiencia de tu producción agrícola con soluciones tecnológicas personalizadas. Software a medida, agricultura de precisión y análisis de datos para optimizar procesos y facilitar decisiones estratégicas. Tecnología y agronomía, integrados para maximizar la productividad de tu empresa."
+      content="Software a medida, agricultura de precisión y análisis de datos para empresas agrícolas de Buenos Aires. Ingeniero Agrónomo y Analista en Sistemas."
     />
+    <link rel="canonical" href="https://digitalagro.masanellia.com.ar/" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="DigitalAgro" />
+    <meta property="og:url" content="https://digitalagro.masanellia.com.ar/" />
+    <meta property="og:title" content="DigitalAgro | Agricultura de precisión y software para el agro" />
+    <meta property="og:description" content="Software a medida, agricultura de precisión y análisis de datos para empresas agrícolas de Buenos Aires." />
+    <meta property="og:image" content="https://digitalagro.masanellia.com.ar/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "DigitalAgro",
+        "url": "https://digitalagro.masanellia.com.ar/",
+        "image": "https://digitalagro.masanellia.com.ar/og-image.png",
+        "description": "Software a medida, agricultura de precisión y análisis de datos para empresas agrícolas.",
+        "address": { "@type": "PostalAddress", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+        "areaServed": { "@type": "AdministrativeArea", "name": "Provincia de Buenos Aires" },
+        "sameAs": ["https://www.linkedin.com/in/amasanelli"],
+        "founder": {
+          "@type": "Person",
+          "name": "Andrés Masanelli",
+          "jobTitle": "Ingeniero Agrónomo y Analista en Sistemas",
+          "sameAs": ["https://www.linkedin.com/in/amasanelli"],
+          "knowsAbout": ["Agricultura de precisión", "Desarrollo de software", "Análisis de datos", "Power BI", "ArcGIS"]
+        }
+      }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS8JYE0P7L"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,28 +47,25 @@
       gtag("js", new Date());
       gtag("config", "G-DS8JYE0P7L");
     </script>
-    <title>DigitalAgro</title>
+    <title>DigitalAgro | Agricultura de precisión y software para el agro</title>
     <style>
       * { box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
       body { background: #f4f4f4; color: #333; }
       header, footer { background: #2e7d32; color: #fff; padding: 20px; }
-      h1 { padding: 20px 0 40px; }
+      h1 { padding: 20px 0; }
+      h1 span { display: block; font-size: 0.75em; padding-top: 40px; }
+      a { color: inherit; }
       h2, h3 { padding-bottom: 20px; }
       h3 { color: #1b5e20; }
       nav { background: #388e3c; padding: 15px; }
       nav a { color: #fff; font-weight: bold; margin: 0 10px; text-decoration: none; }
       section { padding: 20px; }
-      .services, .projects { display: flex; gap: 10px; justify-content: center; align-items: center; }
-      .services { flex-wrap: wrap; justify-content: space-evenly; align-items: stretch; }
-      .service, .project { background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 10px; display: flex; flex-direction: column; min-height: 220px; padding: 20px; }
-      .service { width: min(300px, 100%); }
-      .service p, .project p { margin: auto 0; }
-      .project[hidden] { display: none; }
-      #project-selector { max-width: 700px; width: 70%; }
+      .cards { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-evenly; }
+      .card { background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 10px; display: flex; flex-direction: column; min-height: 220px; padding: 20px; width: min(300px, 100%); }
+      .card p { margin: auto 0; }
+      #contacto p { padding-bottom: 20px; }
       button { background: #2e7d32; border: none; color: #fff; cursor: pointer; }
       button:hover { background: #1b5e20; }
-      .projects button { border-radius: 50%; display: grid; flex-shrink: 0; height: 40px; padding: 0; place-items: center; width: 40px; }
-      .projects button svg { fill: none; height: 20px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; width: 20px; }
       form { background: #fff; border: 1px solid #0001; border-radius: 10px; margin: 0 auto; max-width: 500px; padding: 30px; width: 90%; }
       form input, form textarea { border: 1px solid #ccc; border-radius: 5px; margin: 5px 0; padding: 10px; text-align: left; width: 100%; }
       form button { border-radius: 5px; padding: 10px; width: 100%; }
@@ -44,23 +73,22 @@
   </head>
   <body>
     <header>
-      <h1>DigitalAgro</h1>
-      <h2>Innovación tecnológica para el agro</h2>
+      <h1>DigitalAgro <span>Agricultura de precisión y software para el agro</span></h1>
     </header>
 
     <nav>
-      <a href="#inicio">Inicio</a>
+      <a href="#quien-soy">Quién soy</a>
       <a href="#servicios">Servicios</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
-    <section id="inicio">
-      <h2>Bienvenido</h2>
+    <section id="quien-soy">
+      <h2>Quién soy</h2>
       <p>
-        Soy Ingeniero Agrónomo y Analista en Sistemas y me dedico a impulsar el
-        crecimiento y eficiencia del sector agrícola mediante soluciones
-        tecnológicas personalizadas.
+        Soy Andrés Masanelli, Ingeniero Agrónomo y Analista en Sistemas, y me
+        dedico a impulsar el crecimiento y eficiencia del sector agrícola de la
+        provincia de Buenos Aires mediante soluciones tecnológicas personalizadas.
         <br /><br />
         Con una sólida experiencia en agronomía y programación, desarrollo
         soluciones a medida que se adaptan a las necesidades específicas de
@@ -78,12 +106,12 @@
 
     <section id="servicios">
       <h2>Servicios</h2>
-      <div class="services">
-        <div class="service">
+      <div class="cards">
+        <div class="card">
           <h3>Desarrollo de software</h3>
           <p>Desarrollo a medida de aplicaciones móviles y web para optimizar tus procesos agrícolas.</p>
         </div>
-        <div class="service">
+        <div class="card">
           <h3>Agricultura de precisión</h3>
           <p>
             Armado de ambientaciones basado en imágenes satelitales.
@@ -93,7 +121,7 @@
             Análisis de mapas de rendimiento.
           </p>
         </div>
-        <div class="service">
+        <div class="card">
           <h3>Análisis de datos</h3>
           <p>Creación de reportes basado en datos de distintas fuentes.</p>
         </div>
@@ -102,100 +130,100 @@
 
     <section id="proyectos">
       <h2>Proyectos destacados</h2>
-      <div class="projects">
-        <button id="prev" aria-label="Proyecto anterior"><svg viewBox="0 0 24 24"><path d="M14.5 5l-7 7 7 7"/></svg></button>
-        <div id="project-selector">
-          <div class="project">
-            <h3>Agricultura de precisión</h3>
-            <p>
-              Desde 2018, se han ambientado más de 100.000 hectáreas en la
-              provincia de Buenos Aires. Se utilizan imágenes satelitales de
-              Sentinel y Landsat, combinadas con mapas de rendimiento y
-              evaluaciones de riesgos como inundaciones y heladas. Se
-              desarrollan prescripciones de siembra y fertilización adaptadas
-              a equipos Agrometal, Plantium, Precision Planting, entre otros.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Seguimiento de cultivos</h3>
-            <p>
-              Aplicación web para monitorear índices vegetales en tiempo real
-              durante todo el ciclo de los cultivos. Ofrece análisis de
-              imágenes y envía reportes semanales por correo electrónico con
-              alertas personalizadas.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Costos de aplicación</h3>
-            <p>
-              Aplicación móvil para calcular el costo de pulverizaciones.
-              Permite seleccionar insumos y dosis, e integra precios del ERP
-              Albor, facilitando la toma de decisiones económicas.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Análisis de ensayos</h3>
-            <p>
-              Extensión para ArcGIS que automatiza el análisis de mapas de
-              rendimiento. Facilita el cálculo de resultados en prescripciones
-              variables mediante muestreo aleatorio y ANOVA.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Reportes en Power BI</h3>
-            <p>
-              Desarrollo de reportes interactivos en Power BI, integrando
-              datos del ERP Albor y hojas de cálculo para monitorear siembra,
-              fertilización y cosecha en tiempo real.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Avance de cosecha</h3>
-            <p>
-              Aplicación móvil para generar cartas de porte en el campo.
-              Almacena datos para reportes de cosecha y permite registrar
-              kilos almacenados en silos o bolsas.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Pedido de insumos</h3>
-            <p>
-              Plataforma móvil y web para gestionar pedidos de insumos. Se
-              integra con el ERP Albor para controlar stock disponible y
-              facilita la comunicación entre áreas.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Pedido de camiones</h3>
-            <p>
-              Aplicación para coordinar pedidos de transporte durante la
-              cosecha. Permite realizar solicitudes al área de logística y
-              recibir cupos asignados de manera eficiente.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Recetas agronómicas</h3>
-            <p>
-              Aplicación móvil para generar recetas agronómicas digitales en
-              el campo. Facilita la carga de datos y permite descargar y
-              compartir las recetas en formato PDF.
-            </p>
-          </div>
-          <div class="project" hidden>
-            <h3>Cuaderno virtual</h3>
-            <p>
-              Aplicación móvil para registrar lluvias, recorridas y otros
-              datos de interés agronómico. Se integra con sistemas de imágenes
-              satelitales para mostrar índices vegetales actualizados.
-            </p>
-          </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Agricultura de precisión</h3>
+          <p>
+            Desde 2018, se han ambientado más de 100.000 hectáreas en la
+            provincia de Buenos Aires. Se utilizan imágenes satelitales de
+            Sentinel y Landsat, combinadas con mapas de rendimiento y
+            evaluaciones de riesgos como inundaciones y heladas. Se
+            desarrollan prescripciones de siembra y fertilización adaptadas
+            a equipos Agrometal, Plantium, Precision Planting, entre otros.
+          </p>
         </div>
-        <button id="next" aria-label="Proyecto siguiente"><svg viewBox="0 0 24 24"><path d="M9.5 5l7 7-7 7"/></svg></button>
+        <div class="card">
+          <h3>Seguimiento de cultivos</h3>
+          <p>
+            Aplicación web para monitorear índices vegetales en tiempo real
+            durante todo el ciclo de los cultivos. Ofrece análisis de
+            imágenes y envía reportes semanales por correo electrónico con
+            alertas personalizadas.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Costos de aplicación</h3>
+          <p>
+            Aplicación móvil para calcular el costo de pulverizaciones.
+            Permite seleccionar insumos y dosis, e integra precios del ERP
+            Albor, facilitando la toma de decisiones económicas.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Análisis de ensayos</h3>
+          <p>
+            Extensión para ArcGIS que automatiza el análisis de mapas de
+            rendimiento. Facilita el cálculo de resultados en prescripciones
+            variables mediante muestreo aleatorio y ANOVA.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Reportes en Power BI</h3>
+          <p>
+            Desarrollo de reportes interactivos en Power BI, integrando
+            datos del ERP Albor y hojas de cálculo para monitorear siembra,
+            fertilización y cosecha en tiempo real.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Avance de cosecha</h3>
+          <p>
+            Aplicación móvil para generar cartas de porte en el campo.
+            Almacena datos para reportes de cosecha y permite registrar
+            kilos almacenados en silos o bolsas.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Pedido de insumos</h3>
+          <p>
+            Plataforma móvil y web para gestionar pedidos de insumos. Se
+            integra con el ERP Albor para controlar stock disponible y
+            facilita la comunicación entre áreas.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Pedido de camiones</h3>
+          <p>
+            Aplicación para coordinar pedidos de transporte durante la
+            cosecha. Permite realizar solicitudes al área de logística y
+            recibir cupos asignados de manera eficiente.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Recetas agronómicas</h3>
+          <p>
+            Aplicación móvil para generar recetas agronómicas digitales en
+            el campo. Facilita la carga de datos y permite descargar y
+            compartir las recetas en formato PDF.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Cuaderno virtual</h3>
+          <p>
+            Aplicación móvil para registrar lluvias, recorridas y otros
+            datos de interés agronómico. Se integra con sistemas de imágenes
+            satelitales para mostrar índices vegetales actualizados.
+          </p>
+        </div>
       </div>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
+      <p>
+        Escribime por este formulario o por
+        <a href="https://www.linkedin.com/in/amasanelli" rel="me">LinkedIn</a>.
+      </p>
       <form id="form">
         <input type="text" name="name" placeholder="Nombre" aria-label="Nombre" required />
         <input type="email" name="email" placeholder="Email" aria-label="Email" required />
@@ -205,21 +233,14 @@
     </section>
 
     <footer>
-      <p>&copy; 2024 DigitalAgro | Todos los derechos reservados</p>
+      <p>
+        &copy; DigitalAgro · Andrés Masanelli · Buenos Aires, Argentina ·
+        <a href="https://www.linkedin.com/in/amasanelli" rel="me">LinkedIn</a>
+      </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      const projects = document.querySelectorAll(".project");
-      let i = 0;
-      const show = (step) => {
-        projects[i].hidden = true;
-        i = (i + step + projects.length) % projects.length;
-        projects[i].hidden = false;
-      };
-      document.getElementById("prev").onclick = () => show(-1);
-      document.getElementById("next").onclick = () => show(1);
-
       document.getElementById("form").onsubmit = function (event) {
         event.preventDefault();
         const button = this.querySelector("button");
